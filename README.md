@@ -141,33 +141,33 @@ Fully Connected    (Input: 10, Output: 1)    --> steering angle (Network Output)
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![alt text][image1]
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_center_lane.jpg?raw=true "Center lane driving")
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to be able to stay on the road even if it wanders off near the edges of the road. These images show what a typical recovery looks like :
 
-![alt text][image2]
-![alt text][image3]
-![alt text][image4]
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_recovery1.jpg?raw=true "Recovery start")
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_recovery2.jpg?raw=true "Mid-recovery")
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_recovery3.jpg?raw=true "Recovered")
 
 To augment the dataset, I flipped images and angles thinking that this would help the model generalize to both types of curves since track one had predominantly left curves. For example, here is an image that has then been flipped:
 
-![alt text][image5]
-![alt text][image6]
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_aug_og.jpg?raw=true "Image prior to augmentation")
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_aug_flip.jpg?raw=true "Flipped image")
 
 I also augmented the dataset with minor translations in the x and y directions, brightness scaling to simulate different lighting conditions & randomly scaling brightness of only a certain portion of the image to emulate shadows on the road.
 These transformations can be observed in the images below:
 
-![alt text][image7]
-![alt text][image8]
-![alt text][image9]
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_aug_transl.jpg?raw=true "Translated image")
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_aug_bright.jpg?raw=true "Brightness augmented image")
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_aug_shadow.jpg?raw=true "Shadow augmented image")
 
 Then I recorded center lane driving behaviour on sections of track two which were unique to it in order to get more data points and help the network generalize better. Here are a few examples of these peculiar & challenging areas of track two:
 
-![alt text][image10]
-![alt text][image11]
-![alt text][image12]
-![alt text][image13]
-![alt text][image14]
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_jungle1.jpg?raw=true "Jungle image")
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_jungle2.jpg?raw=true "Jungle image 2")
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_jungle3.jpg?raw=true "Jungle image 3")
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_jungle4.jpg?raw=true "Jungle image 4")
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_jungle5.jpg?raw=true "Jungle image 5")
 
 After the collection process, I had 41,733 number of data points (including left & right camera views). 
 But for each frame, I randomly chose between the left, right & center camera views which meant I effectively had 13,911 
@@ -178,7 +178,7 @@ data points. I then preprocessed this data by:
 
 The following shows the 3 channels of image post the processing pipeline:
 
-![alt text][image15]
+![alt text](https://github.com/sbanga16k/End-to-End-Learning-for-Self-driving-cars/blob/master/Result_images/img_preprocessed.JPG?raw=true "Preprocessed image")
 
 I finally randomly shuffled the data set and set apart 20% of the data for the validation set. 
 
