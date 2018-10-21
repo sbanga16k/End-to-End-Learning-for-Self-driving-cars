@@ -6,6 +6,7 @@
 ### Project Summary: 
 Employ deep learning to clone user car driving behavior on Udacity's simulator. It is a supervised regression problem between the car steering angles and the road images in front of a car. The trainig images are taken from three different camera angles (from the center, the left and the right of the car). As the task involves image processing, the model employed is a Convolutional Neural Network (CNN) for automated feature engineering and developing invariance to translation/rotation. The architeture of the network employed is based off of the NVIDIA model, which has been proven to work in this problem domain but modifed using cues from VGG-net. 
 
+### Objectives:
 The goals of this project are the following:
 1. Use the provided Udacity simulator to collect data of good driving behavior
 2. Build, a convolution neural network (CNN) in Keras that predicts steering angles from images
